@@ -1,3 +1,4 @@
+```mermaid
 sequenceDiagram title Process Sequence Diagram
     actor User
     participant P0
@@ -66,6 +67,6 @@ sequenceDiagram title Process Sequence Diagram
     P0 -->> P0: waitpid(pid)
     P0 -->> User: exit(0)
     deactivate P0
-    
+```   
     
 

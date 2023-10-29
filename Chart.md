@@ -1,5 +1,3 @@
-```mermaid
-
 sequenceDiagram title Process Sequence Diagram
     actor User
     participant P0
@@ -59,6 +57,8 @@ sequenceDiagram title Process Sequence Diagram
         end
         activate C0
         C0 --> C0: waitpid(pid2)
+        C0 -->> SharedMemory: shm.unlink()
+        deactivate SharedMemory
         C0 -->> P0: exit(0)
         deactivate C0
     end
@@ -66,6 +66,6 @@ sequenceDiagram title Process Sequence Diagram
     P0 -->> P0: waitpid(pid)
     P0 -->> User: exit(0)
     deactivate P0
-```    
+    
     
 

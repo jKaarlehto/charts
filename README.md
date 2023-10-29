@@ -1,6 +1,6 @@
 ```mermaid
 
-sequenceDiagram
+sequenceDiagram Process sequence diagram
     actor User
     participant P0
     participant C0
